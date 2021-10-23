@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Pricing component with toggle master</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <h1>Our Pricing</h1>
+    <div class="toggle-wraper">
+      <label class="toggle">
+        <input type="checkbox" id="toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="option">
+      <div class="basic">
+        <h3>Basic</h3>
+        <h2 class="hidden monthly"><i class="fas fa-dollar-sign"></i><span>19.99</span></h2>
+        <h2 class="annually"><i class="fas fa-dollar-sign"></i><span> 199.99</span></h2>
+        <p>500 GB Storage</p>
+        <p>2 Users Allowed</p>
+        <p>Send up to 3 GB</p>
+        <div class="moreinf">Learn More</div>
+      </div>
+      <div class="professional">
+        <h3>Professional</h3>
+        <h2 class="hidden monthly"><i class="fas fa-dollar-sign"></i><span> 24.99</span></h2>
+        <h2 class="annually"><i class="fas fa-dollar-sign"></i><span> 249.99</span></h2>
+        <p>1 TB Storage</p>
+        <p>5 Users Allowed</p>
+        <p>Send up to 10 GB</p>
+        <div class="moreinf">Learn More</div>
+      </div>
+      <div class="master">
+        <h3>Master</h3>
+        <h2 class="hidden monthly"><i class="fas fa-dollar-sign"></i><span> 39.99</span></h2>
+        <h2 class="annually"><i class="fas fa-dollar-sign"></i><span> 399.99</span></h2>
+        <p>2 TB Storage</p>
+        <p>10 Users Allowed</p>
+        <p>Send up to 20 GB</p>
+        <div class="moreinf">Learn More</div>
+      </div>
+    </div>
   </div>
+  <script type="text/javascript" src="./index.js" defer></script>
 </body>
+
 </html>

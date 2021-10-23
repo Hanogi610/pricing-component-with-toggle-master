@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+:root{
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+    --lineargradient: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+* {
+  top: 0;
+  left: 0;
+}
+.top-img{
+  position: absolute;
+  z-index: 1;
+}
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  font-family: Montserrat;
+  color: var(--dark-grayish-blue);
+  background-color: var(--very-light-grayish-blue);
+  background: url('./images/bg-bottom.svg') no-repeat bottom left,
+              url('./images/bg-top.svg') no-repeat top right;
+}
+h1{
+  text-align: center;
+}
+.toggle-wraper{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0 100px;
+  top: 5%;
+  left: 42%;
+}
+.toggle{
+  display: inline-block;
+  position: relative;
+  border-radius: 30px;
+  width: 50px;
+  height: 25px;
+  background-color: hsl(237, 63%, 64%);
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+}
+.toggle::before{
+  content: "Annually";
+  position: absolute;
+  left: -100px;
+  top: 2.5px;
+  color: var(--light-grayish-blue);
+}
+.toggle::after{
+  content: "Monthly";
+  position: absolute;
+  right: -95px;
+  top: 2.5px;
+  color: var(--light-grayish-blue);
+}
+.slider{
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 19px;
+  background-color: white;
+  border-radius: 50px;
+  transition: 400ms ease-in-out;
+}
+input:checked + .slider{
+  transform: translateX(24px);
+}
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.option{
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-35%);
+}
+.basic, .professional, .master {
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  width: 250px;
+  align-items: baseline;
+}
+.basic, .master{
+
+  background-color: #fff;
+}
+.basic{
+  box-shadow: -2px 4px 10px 2px rgba(0,0,0,0.1);
+}
+.master{
+  box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.1);
+}
+.professional{
+  background-color: hsl(237, 63%, 64%);
+  color: white;
+  border: 20px solid hsl(237, 63%, 64%) ;
+}
+.professional .moreinf{
+  color: hsl(237, 63%, 64%);
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 70px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.professional .moreinf:hover{
+  background-color: hsl(237, 63%, 64%);
+  border: 1px solid white;
+  color: white;
+}
+.basic .moreinf, .master .moreinf{
+  background-color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 70px;
+  cursor: pointer;
+}
+.basic .moreinf:hover, .master .moreinf:hover{
+  background-color: #fff;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+}
+.hidden{
+  display: none;
+}
+.monthly, .annually{
+  font-size: 3em;
+}
+h2, p {
+  border-bottom: 1px solid var(--light-grayish-blue);
+  line-height: 3rem;
+}
